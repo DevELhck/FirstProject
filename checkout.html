@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Add custom styles if necessary */
+    .payment-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">E-Store</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+          <li class="nav-item"><a class="nav-link active" href="checkout.html">Checkout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Payment Form Section -->
+  <div class="container mt-5">
+    <h2>Payment Information</h2>
+    <form class="payment-form mt-4">
+      
+      <!-- Customer Information -->
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="address" class="form-label">Shipping Address</label>
+        <textarea class="form-control" id="address" rows="3" placeholder="Enter your address" required></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <!-- Payment Details -->
+      <div class="mb-3">
+        <label for="cardNumber" class="form-label">Card Number</label>
+        <input type="text" class="form-control" id="cardNumber" placeholder="Enter card number" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="expiry" class="form-label">Expiry Date</label>
+        <input type="text" class="form-control" id="expiry" placeholder="MM/YY" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="cvv" class="form-label">CVV</label>
+        <input type="text" class="form-control" id="cvv" placeholder="Enter CVV" required>
+      </div>
+
+      <!-- Payment Confirmation -->
+      <div class="mt-4">
+        <h3>Total: $<span id="total-payment">0.00</span></h3>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-3">Complete Payment</button>
+    </form>
+  </div>
+
+  <!-- Include Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript to load the cart total and handle form submission -->
+  <script>
+    // Function to load the total price from localStorage and display it
+    function loadTotalPrice() {
+      const checkoutCart = JSON.parse(localStorage.getItem('checkoutCart')) || [];
+      let totalPrice = 0;
+
+      // Calculate total price
+      checkoutCart.forEach(product => {
+        totalPrice += parseFloat(product.price);
+      });
+
+      // Update total price display
+      document.getElementById('total-payment').textContent = totalPrice.toFixed(2);
+    }
+
+    // Handle payment form submission
+    document.querySelector('form').addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent form from submitting normally
+
+      // Get form data
+      const name = document.getElementById('name').value;
+      const address = document.getElementById('address').value;
+      const email = document.getElementById('email').value;
+      const cardNumber = document.getElementById('cardNumber').value;
+      const expiry = document.getElementById('expiry').value;
+      const cvv = document.getElementById('cvv').value;
+
+      // You can add payment processing logic here (e.g., call a payment gateway API)
+
+      // For now, simulate successful payment
+      alert('Payment Successful! Thank you for your purchase.');
+      
+      // Clear the cart after payment
+      localStorage.removeItem('checkoutCart');
+      
+      // Redirect to a thank-you or order confirmation page (optional)
+      window.location.href = 'thank-you.html';
+    });
+
+    // Load the total price on page load
+    loadTotalPrice();
+  </script>
+
+</body>
+</html>

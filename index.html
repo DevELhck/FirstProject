@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elwin's Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css"> <!-- Link to your custom CSS -->
+  <style>
+    /* Custom styles */
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+
+    .navbar {
+      background-color: #333;
+      /* Dark background for a classy look */
+      padding: 0.8rem 1rem;
+    }
+
+    .navbar .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .navbar-nav .nav-link {
+      color: #ddd;
+      font-size: 1rem;
+      margin-right: 15px;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #f39c12;
+      /* Accent color on hover */
+    }
+
+    .navbar .navbar-toggler-icon {
+      background-color: #fff;
+      /* White icon for visibility */
+    }
+
+    .navbar .nav-item:last-child .nav-link {
+      display: flex;
+      align-items: center;
+    }
+
+    .cart-icon {
+      font-size: 1.3rem;
+      /* Adjust icon size */
+      position: relative;
+    }
+
+    .cart-icon i {
+      color: #fff;
+    }
+
+    .cart-icon .badge {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background-color: #f39c12;
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 2px 6px;
+      border-radius: 50%;
+    }
+
+    .tree {
+      background-color: #ddd;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">E-Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kids.html">Kids Wear</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="men.html">Men Wear</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="women.html">Women Wear</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="accessories.html">Accessories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shoes.html">Shoes</a>
+          </li>
+          <li class="nav-item cart-icon">
+            <a class="nav-link" href="cart.html">
+              <i class="bi bi-cart"></i> Cart
+              <span class="badge">3</span> <!-- Replace with dynamic cart count -->
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Kids Wear Banner -->
+  <div class="row">
+    <div class="col-12 mb-4">
+      <div class="banner"
+        style="background-image: url('images/1152X252-Desktop-Single-banner.jpg'); height: 300px; background-size: cover; background-position: center;">
+        <a href="kids.html"
+          class="d-flex justify-content-center align-items-center text-white text-decoration-none h-100"
+          style="background-color: rgba(0, 0, 0, 0.5);">
+          <h3 class="text-center"></h3>
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+  <!-- Products Grid Section -->
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Popular Category
+    </h2>
+    <div class="row">
+      <!-- Product 1 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (48).jpg" class="card-img-top" alt="Product 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Pink top</h5>
+            <p class="card-text">$25.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="1" data-name="Pink top" data-price="25.00"
+              data-image="images/1 (48).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (5).jpg" class="card-img-top" alt="Product 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Gold love necklace</h5>
+            <p class="card-text">$40.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="2" data-name="Gold love necklace"
+              data-price="40.00" data-image="images/1 (5).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (52).jpg" class="card-img-top" alt="Product 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Danani high quality top</h5>
+            <p class="card-text">$30.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="3" data-name="Danani high quality top"
+              data-price="30.00" data-image="images/1 (52).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 4 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (37).jpg" class="card-img-top" alt="Product 4">
+          <div class="card-body text-center">
+            <h5 class="card-title">Skimpy red</h5>
+            <p class="card-text">$50.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="4" data-name="Skimpy red" data-price="50.00"
+              data-image="images/1 (37).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 5 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (33).jpg" class="card-img-top" alt="Product 5">
+          <div class="card-body text-center">
+            <h5 class="card-title">tank top hoodie</h5>
+            <p class="card-text">$20.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="5" data-name="tank top hoodie" data-price="20.00"
+              data-image="images/1 (33).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 6 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (38).jpg" class="card-img-top" alt="Product 6">
+          <div class="card-body text-center">
+            <h5 class="card-title">Clarafly dress</h5>
+            <p class="card-text">$15.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="6" data-name="Clarafly dress" data-price="15.00"
+              data-image="images/1 (38).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 7 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (2).jpg" class="card-img-top" alt="Product 7">
+          <div class="card-body text-center">
+            <h5 class="card-title">High quality jacket</h5>
+            <p class="card-text">$35.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="7" data-name="High quality jacket"
+              data-price="35.00" data-image="images/1 (2).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 8 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (30).jpg" class="card-img-top" alt="Product 8">
+          <div class="card-body text-center">
+            <h5 class="card-title">Black armless hoodie</h5>
+            <p class="card-text">$18.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="8" data-name="Black armless hoodie"
+              data-price="18.00" data-image="images/1 (30).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 9 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (50).jpg" class="card-img-top" alt="Product 9">
+          <div class="card-body text-center">
+            <h5 class="card-title">Corporate blue shirt</h5>
+            <p class="card-text">$45.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="9" data-name="Corporate blue shirt"
+              data-price="45.00" data-image="images/1 (50).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 10 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (17).jpg" class="card-img-top" alt="Product 10">
+          <div class="card-body text-center">
+            <h5 class="card-title">Kelvin beach full outfit</h5>
+            <p class="card-text">$55.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="10" data-name="kelvin beach full outfit"
+              data-price="55.00" data-image="images/1 (17).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 11 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (11).jpg" class="card-img-top" alt="Product 11">
+          <div class="card-body text-center">
+            <h5 class="card-title">Airforce 204 sneakers</h5>
+            <p class="card-text">$60.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="11" data-name="Airforce 204 sneakers"
+              data-price="60.00" data-image="images/1 (11).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 12 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (57).jpg" class="card-img-top" alt="Product 12">
+          <div class="card-body text-center">
+            <h5 class="card-title">Spiderman green hoodie</h5>
+            <p class="card-text">$30.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="12" data-name="Spiderman green hoodie"
+              data-price="30.00" data-image="images/1 (57).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 13 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (28).jpg" class="card-img-top" alt="Product 13">
+          <div class="card-body text-center">
+            <h5 class="card-title">High quality joggers</h5>
+            <p class="card-text">$28.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="13" data-name="High quality joggers"
+              data-price="28.00" data-image="images/1 (28).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 14 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (27).jpg" class="card-img-top" alt="Product 14">
+          <div class="card-body text-center">
+            <h5 class="card-title">Dark Grey kylexy hoodie</h5>
+            <p class="card-text">$38.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="14" data-name="Dark Grey kylexy hoodie"
+              data-price="38.00" data-image="images/1 (27).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 15 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (61).jpg" class="card-img-top" alt="Product 15">
+          <div class="card-body text-center">
+            <h5 class="card-title">Diamond necklace wristwatch</h5>
+            <p class="card-text">$22.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="15" data-name="Diamond necklace wristwatch"
+              data-price="22.00" data-image="images/1 (61).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 16 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (16).jpg" class="card-img-top" alt="Product 16">
+          <div class="card-body text-center">
+            <h5 class="card-title">Military 3014 airforce</h5>
+            <p class="card-text">$20.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="16" data-name="Military 3014 airforce"
+              data-price="20.00" data-image="images/1 (16).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 17 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (41).jpg" class="card-img-top" alt="Product 17">
+          <div class="card-body text-center">
+            <h5 class="card-title">Jeniffer L panties</h5>
+            <p class="card-text">$15.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="17" data-name="Jeniffer L panties"
+              data-price="15.00" data-image="images/1 (41).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 18 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (20).jpg" class="card-img-top" alt="Product 18">
+          <div class="card-body text-center">
+            <h5 class="card-title">Yeezy 4219 sneakers</h5>
+            <p class="card-text">$50.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="18" data-name="Yeezy 4219 sneakers"
+              data-price="50.00" data-image="images/1 (20).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 19 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (25).jpg" class="card-img-top" alt="Product 19">
+          <div class="card-body text-center">
+            <h5 class="card-title">Vip black londoner</h5>
+            <p class="card-text">$45.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="19" data-name="Vip black londoner"
+              data-price="45.00" data-image="images/1 (25).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 20 -->
+      <div class="col-md-3">
+        <div class="card">
+          <img src="images/1 (44).jpg" class="card-img-top" alt="Product 20">
+          <div class="card-body text-center">
+            <h5 class="card-title">High quality female jean</h5>
+            <p class="card-text">$40.00</p>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">⭐⭐⭐⭐⭐</span>
+            </div>
+            <!-- Add data attributes for the product -->
+            <a href="#" class="btn btn-primary add-to-cart" data-id="20" data-name="High quality female jean"
+              data-price="40.00" data-image="images/1 (44).jpg">
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banner Section -->
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Men Wear Banner -->
+      <div class="col-md-6 mb-4">
+        <div class="banner"
+          style="background-image: url('images/572X250_Desktop_Double_banner.jpg'); height: 300px; background-size: cover; background-position: center;">
+          <a href="men.html"
+            class="d-flex justify-content-center align-items-center text-white text-decoration-none h-100"
+            style="background-color: rgba(0, 0, 0, 0.5);">
+            <h3 class="text-center">Men Wear</h3>
+          </a>
+        </div>
+      </div>
+
+      <!-- Women Wear Banner -->
+      <div class="col-md-6 mb-4">
+        <div class="banner"
+          style="background-image: url('images/572X250_Desktop_Double_banner_copy.jpg'); height: 300px; background-size: cover; background-position: center;">
+          <a href="women.html"
+            class="d-flex justify-content-center align-items-center text-white text-decoration-none h-100"
+            style="background-color: rgba(0, 0, 0, 0.5);">
+            <h3 class="text-center">Women Wear</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kids Wear Banner -->
+    <div class="row">
+      <div class="col-12 mb-4">
+        <div class="banner"
+          style="background-image: url('images/1152X252-Desktop-Single-banner.jpg'); height: 300px; background-size: cover; background-position: center;">
+          <a href="kids.html"
+            class="d-flex justify-content-center align-items-center text-white text-decoration-none h-100"
+            style="background-color: rgba(0, 0, 0, 0.5);">
+            <h3 class="text-center">Kids Wear</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Product Carousel Section -->
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Featured Products</h2>
+
+    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- First Slide -->
+        <div class="carousel-item active">
+          <div class="row">
+            <!-- Product Card 1 -->
+            <div class="col-md-3">
+              <div class="card">
+                <img src="images/1 (1).jpg" class="card-img-top" alt="Product 1">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Sleek sneakers</h5>
+                  <p class="card-text">$25.00</p>
+                  <!-- Add data attributes for the product -->
+                  <a href="#" class="btn btn-primary add-to-cart" data-id="62" data-name="Sleek sneakers"
+                    data-price="25.00" data-image="images/1 (1).jpg">
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="col-md-3">
+              <div class="card">
+                <img src="images/1 (19).jpg" class="card-img-top" alt="Product 2">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Black sneaky</h5>
+                  <p class="card-text">$40.00</p>
+                  <!-- Add data attributes for the product -->
+                  <a href="#" class="btn btn-primary add-to-cart" data-id="63" data-name="Black sneaky"
+                    data-price="40.00" data-image="images/1 (19).jpg">
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="col-md-3">
+              <div class="card">
+                <img src="images/1 (15).jpg" class="card-img-top" alt="Product 3">
+                <div class="card-body text-center">
+                  <h5 class="card-title">high fashion</h5>
+                  <p class="card-text">$30.00</p>
+                  <!-- Add data attributes for the product -->
+                  <a href="#" class="btn btn-primary add-to-cart" data-id="64" data-name="high fashion"
+                    data-price="30.00" data-image="images/1 (15).jpg">
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="col-md-3">
+              <div class="card">
+                <img src="images/1 (13).jpg" class="card-img-top" alt="Product 4">
+                <div class="card-body text-center">
+                  <h5 class="card-title">lane chris shoes</h5>
+                  <p class="card-text">$50.00</p>
+                  <!-- Add data attributes for the product -->
+                  <a href="#" class="btn btn-primary add-to-cart" data-id="65" data-name="lane chris shoes"
+                    data-price="50.00" data-image="images/1 (13).jpg">
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Slide -->
+        <div class="carousel-item">
+          <div class="row">
+            <!-- Product Card 5 -->
+            <div class="col-md-3">
+              <div class="card">
+                <img src="images/1 (33).jpg" class="card-img-top" alt="Product 5">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Tank top hoodie</h5>
+                  <p class="card-text">$20.00</p>
+                  <!-- Add data attributes for the product -->
+                  <a href="#" class="btn btn-primary add-to-cart" data-id="5" data-name="Tank top hoodie"
+                    data-price="20.00" data-image="images/1 (33).jpg">
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Product Card 6 -->
+            <div class="col-md-3">
+              <div class="card">
+                <img src="images/1 (38).jpg" class="card-img-top" alt="Product 6">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Clarafly dress</h5>
+                  <p class="card-text">$15.00</p>
+                  <!-- Add data attributes for the product -->
+                  <a href="#" class="btn btn-primary add-to-cart" data-id="6" data-name="Clarafly dress"
+                    data-price="15.00" data-image="images/1 (38).jpg">
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Product Card 7 -->
+            <div class="col-md-3">
+              <div class="card">
+                <img src="images/1 (2).jpg" class="card-img-top" alt="Product 7">
+                <div class="card-body text-center">
+                  <h5 class="card-title">High quality Jacket</h5>
+                  <p class="card-text">$35.00</p>
+                  <!-- Add data attributes for the product -->
+                  <a href="#" class="btn btn-primary add-to-cart" data-id="11" data-name="High quality jacket"
+                    data-price="35.00" data-image="images/1 (2).jpg">
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Product Card 8 -->
+            <div class="col-md-3">
+              <div class="card">
+                <img src="images/1 (30).jpg" class="card-img-top" alt="Product 8">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Black armless hoodie</h5>
+                  <p class="card-text">$18.00</p>
+                  <!-- Add data attributes for the product -->
+                  <a href="#" class="btn btn-primary add-to-cart" data-id="12" data-name="Black armless hoodie"
+                    data-price="18.00" data-image="images/1 (30).jpg">
+                    Add to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Include Bootstrap JS (for carousel functionality) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- Promo Section -->
+  <div class="container mt-5">
+    <div class="alert alert-success text-center">
+      <h4>Special Promo! Get 20% off on your first order!</h4>
+      <a href="promo.html" class="btn btn-warning">Learn More</a>
+    </div>
+  </div>
+
+  <!-- Last before footer -->
+  <div class="tree">
+    <h3>Enjoy The Hottest Fashion at E-store !</h3>
+    <p>Shop for everything you need on E-store Nigeria!</p>
+    <p>E-store Nigeria is the largest online shopping website in Nigeria. We offer a platform where
+      customers in any part of Nigeria can find and shop for all they need in one online store and
+      that platform is the E-store shopping website. On the E-store mobile app or website, you can shop from
+      the comfort of your home or during work breaks and get everything delivered fast without you having
+      to stress or move an inch. Be it fashion, electronics, mobile phones, computers,
+      or your everyday groceries you can get everything you need on E-store online store.</p>
+    <h4>Shop for Original and Quality Items at The Best Prices</h4>
+    <p>E-store Nigeria prides itself in giving the best prices and the best quality of products you can find
+      anywhere in the country. Our strong partnership with top brands like Gucci, Prada
+      Diageo,Adidas, Nike, Defacto, Trendyol, etc. guarantees our customers the cheapest prices on
+      original brand products. Beyond that, customers also have exclusive access to the latest product released by these
+      top brands. If you enjoy exclusivity,
+      the Jumia Official Store is the right place for you. On the Jumia official stores, you can experience product
+      launches and be among the first set of people in Nigeria to own new products. You can also enjoy huge offers on
+      brand days that come with heavy
+      discounts on various products ranging Accessories to clothing items, sneakers, and many more!</p>
+    <h5>Shop the Latest Fashion and Trendy Outfits Online</h5>
+    <p>Discover an extensive range of fashion items for women, men, and kids on Jumia.
+      Our women's fashion collection includes a diverse selection of clothing such as blouses,
+      pants, and jeans. We also offer a variety of gowns in different lengths and materials to
+      suit your individual style. Additionally, browse through our unique fashion accessories like
+      shoes, bags, jewelry, and sunglasses, all at unbeatable prices.
+
+      For men's fashion, Jumia has an impressive collection of stylish clothing pieces that can make a
+      statement. Find quality men's trousers, shoes, shirts, watches and suits at the most affordable
+      prices. Sports enthusiasts can also get their hands on quality gym wear, trendy sneakers, and other
+      sportswear items.
+
+      At E-store, we haven't forgotten about the little ones. Browse through our selection of baby clothes for
+      boys and girls and their accessories. Shop now on E-store Nigeria and enjoy an incredible online shopping
+      experience.</p>
+    <h5>Enjoy Top Deals and Discounts when Shopping on E-store Nigeria Online Store</h5>
+    <p>There are limitless offers and deals on the Jumia Nigeria online store. Enjoy up to 80% discount on selected
+      items
+      of the day during the flash sales. We also have Half Price Deals where our shoppers buy selected products like
+      mobile phones, laptops, phone accessories, and clothing pieces for half the original price. Get the best prices
+      you can find on the best deals page.
+
+      Enjoy other weekly offers that run all year long, which means that every time you shop on the Jumia website, you
+      are sure to enjoy mouth-watering discounts and deals that will help you save more and get the most affordable
+      prices no one else can give you. To know more about these offers and deals, you can subscribe to our push
+      notifications and newsletters, read our blog,
+      and follow us on all our social media accounts.</p>
+
+
+  </div>
+
+  <script>
+    // Add event listener to all "Add to Cart" buttons
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', function (event) {
+        event.preventDefault();  // Prevent the default anchor behavior from navigating to another page
+
+        // Get product data from data attributes
+        const productId = this.getAttribute('data-id');
+        const productName = this.getAttribute('data-name');
+        const productPrice = this.getAttribute('data-price');
+        const productImage = this.getAttribute('data-image');
+
+        // Create an object for the product
+        const product = {
+          id: productId,
+          name: productName,
+          price: productPrice,
+          image: productImage
+        };
+
+        // Retrieve cart items from localStorage, if any
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Add the product to the cart
+        cart.push(product);
+
+        // Save the updated cart back to localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        //  show a message or update the cart count in the navbar
+        alert(`${productName} added to cart!`);
+      });
+    });
+  </script>
+
+
+
+
+
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <!-- About Us Section -->
+        <div class="col-md-3 mb-4">
+          <h5>About E-Store</h5>
+          <p>We are a leading online retailer offering a wide range of fashion
+            products for men, women, and kids. Enjoy shopping with the best prices and fast delivery!</p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="col-md-3 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="men.html" class="text-white text-decoration-none">Men Wear</a></li>
+            <li><a href="women.html" class="text-white text-decoration-none">Women Wear</a></li>
+            <li><a href="kids.html" class="text-white text-decoration-none">Kids Wear</a></li>
+            <li><a href="accessories.html" class="text-white text-decoration-none">Accessories</a></li>
+            <li><a href="cart.html" class="text-white text-decoration-none">Cart</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Service Section -->
+        <div class="col-md-3 mb-4">
+          <h5>Customer Service</h5>
+          <ul class="list-unstyled">
+            <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+            <li><a href="faq.html" class="text-white text-decoration-none">FAQ</a></li>
+            <li><a href="shipping.html" class="text-white text-decoration-none">Shipping Information</a></li>
+            <li><a href="returns.html" class="text-white text-decoration-none">Returns & Exchanges</a></li>
+            <li><a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Follow Us & Payment Methods Section -->
+        <div class="col-md-3 mb-4">
+          <h5>Follow Us</h5>
+          <div class="d-flex">
+            <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-youtube"></i></a>
+          </div>
+
+          <h5 class="mt-4">Payment Methods</h5>
+          <div class="d-flex">
+            <img src="images/paypal-icon.png" alt="Paypal" class="me-3" style="width: 40px;">
+            <img src="images/visa-icon.png" alt="Visa" class="me-3" style="width: 40px;">
+            <img src="images/mastercard-icon.png" alt="MasterCard" class="me-3" style="width: 40px;">
+            <img src="images/amex-icon.png" alt="American Express" class="me-3" style="width: 40px;">
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <!-- Footer Bottom Section -->
+      <div class="row">
+        <div class="col-12 text-center">
+          <p>&copy; 2025 E-Store. All rights reserved. | Designed by YourCompanyName</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Add Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script> <!-- Link to your custom JavaScript -->
+</body>
+
+</html>
